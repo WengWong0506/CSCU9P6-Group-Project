@@ -15,9 +15,10 @@ You should always take credit for your work.*/
 */
 
 public class Gate {
-	public static int FREE = 0;
-	public static int RESERVED = 1;
-	public static int OCCUPID = 2;
+	//An Enum would make these first 3 variables much cleaner
+	public static final int FREE = 0;
+	public static final int RESERVED = 1;
+	public static final int OCCUPID = 2;
 	private int status = FREE;
 	private int mCode;
 	
