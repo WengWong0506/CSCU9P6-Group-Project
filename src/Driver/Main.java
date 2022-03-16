@@ -32,7 +32,6 @@ public class Main {
 		//TODO Auto-Generated Method Stub
 		AircraftManagementDatabase model1 = new AircraftManagementDatabase();
 		GateInfoDatabase gateDatabase = new GateInfoDatabase();
-		
 		RadarTransceiver radar = new RadarTransceiver(model1, "Radar Transceiver");
 		LATC latc = new LATC(model1, "Radar Transceiver");
 		MaintenanceInspector mainInspector = new MaintenanceInspector(model1, "Radar Transceiver");
@@ -42,7 +41,4 @@ public class Main {
 		PublicInfo pi = new PublicInfo(model1,"Public Information Interface");
 		CleaningSupervisor cs = new CleaningSupervisor(model1,"Cleaning Supervisor");
 	}
-	
-	
-
 }
