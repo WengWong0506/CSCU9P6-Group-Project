@@ -1,5 +1,10 @@
 package Management;
 
+import Flights.FlightDescriptor;
+import Flights.Itinerary;
+import Passenger.PassengerDetails;
+import Passenger.PassengerList;
+
 /*Please put your student ID in so proper accreditation can be given for your work. 
 Ensure it is only your Student ID and *not* your name as marking is done anonymously.
 Please only add your name on this class if you have worked on this class.
@@ -15,9 +20,6 @@ You should always take credit for your work.*/
 */
 
 public class ManagementRecord {
-<<<<<<< Updated upstream
-
-=======
 	
 	enum Status{
 		FREE,
@@ -40,7 +42,7 @@ public class ManagementRecord {
 		AWAITING_TAKEOFF,
 		DEPARTING_THROUGH_LOCAL_AIRSPACE
 	}
-	
+  
 	private int status;
 	private int gateNumber;
 	private String flightCode;
@@ -51,11 +53,11 @@ public class ManagementRecord {
 	public void setStatus (int newStatus) {
 		this.status = newStatus;
 	}
-	
+  
 	public void setStatus (Status newStatus) {
 		this.status = newStatus.ordinal();
 	}
-	
+
 	public int getStatus() {
 		return this.status;
 	}
@@ -76,6 +78,7 @@ public class ManagementRecord {
 		//TODO Complete Method
 	}
 	
+
 	/**
 	 * If the status is READY_CLEAN_AND_MAINT or CLEAN_AWAIT_MAINT, sets faultDescription equal to description.
 	 * @param description
@@ -84,7 +87,6 @@ public class ManagementRecord {
 		if (this.status == Status.READY_CLEAN_AND_MAINT.ordinal() || this.status == Status.CLEAN_AWAIT_MAINT.ordinal()) {
 			this.faultDescription = description;
 		}
-		
 	}
 	
 	/**
@@ -112,5 +114,4 @@ public class ManagementRecord {
 	public Itinerary getItinerary() {
 		return this.itinerary;
 	}
->>>>>>> Stashed changes
 }
