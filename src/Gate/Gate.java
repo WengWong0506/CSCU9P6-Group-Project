@@ -19,14 +19,16 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
 public class Gate extends JFrame implements ActionListener{
 
-	//An Enum would make these first 3 variables much cleaner
-	public static final int FREE = 0;
-	public static final int RESERVED = 1;
-	public static final int OCCUPID = 2;
-	private int status = FREE;
+	enum Status {
+		FREE,
+		RESERVED,
+		OCCUPIED
+	}
+
+	private int status = Status.FREE.ordinal();
+
 	private int mCode;
 	
 	private GateInfoDatabase gateDatabase;
