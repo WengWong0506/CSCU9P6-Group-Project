@@ -14,11 +14,30 @@ You should always take credit for your work.*/
 * @author 
 */
 
+<<<<<<< Updated upstream
 public class Gate {
 	public static int FREE = 0;
 	public static int RESERVED = 1;
 	public static int OCCUPID = 2;
 	private int status = FREE;
+=======
+import Gate.GateInfoDatabase;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+
+public class Gate extends JFrame implements ActionListener{
+
+	enum Status {
+		FREE,
+		RESERVED,
+		OCCUPIED
+	}
+
+	private int status = Status.FREE.ordinal();
+>>>>>>> Stashed changes
 	private int mCode;
 	
 	/**
