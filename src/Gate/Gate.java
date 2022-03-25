@@ -98,6 +98,36 @@ public class Gate{
 	
 }
 
+	public void allocate (int mCode) {
+		
+	}
+	
+	/**
+	 * 
+	 */
+	public void docked() {
+		status = Status.OCCUPIED.ordinal();
+		gateStatus = status;
+	}
+	
+	/**
+	 * 
+	 */
+	public void departed() {
+		status = Status.FREE.ordinal();
+		gateStatus = status;
+	}
+	
+	/**
+	 * 
+	 */
+	public void refresh() {
+		
+	}
+
+	
+}
+
     	//Panel - center
     	center = new JPanel(new FlowLayout(FlowLayout.LEFT,20,7));
     	center.setPreferredSize(new Dimension(140,280));
